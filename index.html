@@ -105,7 +105,7 @@
 
                             <label for="department">Department</label>
                             <select id="department" name="departmentName" required>
-                                <option value=" " selected disabled>Select Department</option>
+                                <option value="" selected disabled>Select Department</option>
                                 <option value="cse">Computer Science</option>
                                 <option value="electrical">Electrical</option>
                                 <option value="civil">Civil </option>
@@ -115,31 +115,53 @@
 
                             <label for="semester">Semester</label>
                             <select id="semester" name="semesterName" required>
-                                <option value=" " selected disabled>Select Semester</option>
-                                <option value="first">first</option>
-                                <option value="second">second</option>
-                                <option value="third">third</option>
-                                <option value="fourth">fourth</option>
-                                <option value="fifth">fifth</option>
-                                <option value="sixth">sixth</option>
-                                <option value="seventh">seventh</option>
+                                <option value="" selected disabled>Select Semester</option>
+                                <option value="1">first</option>
+                                <option value="2">second</option>
+                                <option value="3">third</option>
+                                <option value="4">fourth</option>
+                                <option value="5">fifth</option>
+                                <option value="6">sixth</option>
+                                <option value="7">seventh</option>
                             </select>
                             <label for="cgpa">CGPA</label>
-                            <input type="number" id="cgpa" placeholder="Enter CGPA(0-4.00)" min="0" max="4" step="0.01"
+                            <input type="number" id="cgpa" name="cgpaNumber"placeholder="Enter CGPA(0-4.00)" min="0" max="4" step="0.01"
                                 required>
-                                <button>+ Add Student</button>
+                                <button type="submit">+ Add Student</button>
                         </form>
                     </section>
 
                     <section id="search-student">
                         <h2>Search Student</h2>
+                        <form>
                         <input type="search" placeholder="Search by Name, department">
+
+                        </form>
                     </section>
 
                 </div>
 
                 <section id="filter-student">
                     <h2>Quick Filters</h2>
+                    <form>
+                        <label for="filter-department">Department</label>
+                        <select id="filter-department" name="filter-department">
+                            <option value="" selected disabled>All Departments</option>
+                            <option value="cse">Computer</option>
+                            <option value="eee">Electrical</option>
+                            <option value="ct">Civil</option>
+                            <option value="rac">RAC</option>
+                            <option value="Construction">Construction</option>
+
+            
+
+                        </select>
+
+                        <button type="button">Sort by Name</button>
+                            <button type="button">Sort by CGPA</button>
+                            <button type="button">Sort by Semester</button>
+                            <button type="button">Clear Filters</button>
+                    </form>
                 </section>
 
             </div>
