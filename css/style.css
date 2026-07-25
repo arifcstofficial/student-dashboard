@@ -1,0 +1,134 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #162233;
+    color:white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:3px 2px;
+    padding:10px 40px;
+
+}
+
+.header-left{
+    display: flex;
+    gap:20px;
+}
+
+
+.logo-img{
+    height:15px;
+    width:15px;
+}
+
+main{
+    display:grid;
+    grid-template-columns:170px 1fr; 
+    min-height: 100vh;
+
+}
+
+aside{
+    padding:40px 14px;
+
+}
+
+.dashboard-nav-bar{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    font-size: 15px;
+}
+
+.dashboard-nav-bar li{
+    border-radius: 7px;
+    overflow: hidden;
+}
+.dashboard-nav-bar a{
+    display: block;
+    padding:10px 12px;
+    color:white;
+    text-decoration: none;
+     transition: .5s;
+    
+}
+
+.dashboard-nav-bar a:hover{
+    background-color: aqua;
+   
+    color:black;
+}
+
+.content{
+    background-color: #f8fafc;
+    color:black;
+    padding:30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content section{
+    background-color: rgb(230, 218, 218);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+
+#statistics{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px; 
+}
+#statistics .stat-card{
+ text-align: left;
+ background-color: aliceblue;
+ padding:15px;
+ border-radius: 10px;
+}
+
+.stat-card h3,h4{
+    font-size:15px;
+    font-weight: 500;
+    color:#64748b;
+}
+.stat-card p{
+    font-size: 30px;
+    font-weight: bold;
+}
+#stat-card1{
+    color: magenta;
+}
+#stat-card2{
+    color:green;
+}
+#stat-card3{
+    color:rgb(114, 105, 107);
+}
+#stat-card4{
+    color:blue;
+}
+
+
+.student-tools{
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    gap:10px;
+}
+
+.add-search-parent{
+    display: grid;
+    gap:10px;
+}

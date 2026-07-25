@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img class="logo-img" src="./assests/icons/dashboard.svg" alt="dashboard-image">
+            <div>
+                <h1>Student Management Dashboard</h1>
+                <P>Manage student information efficiently</P>
+            </div>
+        </div>
+
+
+        <div class="header-right">
+            <img class="logo-img" src="./assests/icons/administrator.svg" alt="">
+            <span>Administrator</span>
+            <p>July 25,2026</p>
+        </div>
+
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul class="dashboard-nav-bar">
+                    <li>
+                        <a href="#dashboard-overview">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#add-student">Add Student</a>
+
+                    </li>
+                    <li>
+                        <a href="#all-students">All Students</a>
+                    </li>
+                    <li>
+                        <a href="#search-student">Search Students</a>
+
+                    </li>
+                    <li>
+                        <a href="#filter-student">Filter Students</a>
+
+                    </li>
+                    <li>
+                        <a href="#statistics">Statistics</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+
+                    </li>
+                </ul>
+
+            </nav>
+
+
+
+
+        </aside>
+
+        <section class="content">
+            <section id="statistics">
+                <article class="stat-card">
+                    <h3>Total Students</h3>
+                    <p id="stat-card1">245</p>
+                    <h4>Total Registered</h4>
+                </article>
+
+                <artcile class="stat-card">
+                    <h3>Average CGPA</h3>
+                    <p id="stat-card2">3.45</p>
+                    <h4>Overall Average</h4>
+                </artcile>
+
+                <article class="stat-card">
+                    <h3>Highest CGPA</h3>
+                    <p id="stat-card3">3.93</p>
+                    <h4>Top Performer</h4>
+                </article>
+
+                <article class="stat-card">
+                    <h3>Departments</h3>
+                    <p id="stat-card4">4</p>
+                    <h4>All Departments</h4>
+                </article>
+
+            </section>
+
+            <div class="student-tools">
+                <div class="add-search-parent">
+                    <section id="add-student">
+                        <h2>Add New Student</h2>
+
+                        <form class="student-form">
+                            <label for="student-name">Name</label>
+                            <input type="text" id="student-name" name="studentName" placeholder="Enter full name"
+                                required>
+
+                            <label for="department">Department</label>
+                            <select id="department" name="departmentName" required>
+                                <option value=" " selected disabled>Select Department</option>
+                                <option value="cse">Computer Science</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="civil">Civil </option>
+                                <option value="Construction">Construction</option>
+                                <option value="Refrigeration">RAC</option>
+                            </select>
+
+                            <label for="semester">Semester</label>
+                            <select id="semester" name="semesterName" required>
+                                <option value=" " selected disabled>Select Semester</option>
+                                <option value="first">first</option>
+                                <option value="second">second</option>
+                                <option value="third">third</option>
+                                <option value="fourth">fourth</option>
+                                <option value="fifth">fifth</option>
+                                <option value="sixth">sixth</option>
+                                <option value="seventh">seventh</option>
+                            </select>
+                            <label for="cgpa">CGPA</label>
+                            <input type="number" id="cgpa" placeholder="Enter CGPA(0-4.00)" min="0" max="4" step="0.01"
+                                required>
+                                <button>+ Add Student</button>
+                        </form>
+                    </section>
+
+                    <section id="search-student">
+                        <h2>Search Student</h2>
+                        <input type="search" placeholder="Search by Name, department">
+                    </section>
+
+                </div>
+
+                <section id="filter-student">
+                    <h2>Quick Filters</h2>
+                </section>
+
+            </div>
+
+
+            <section id="student-list">
+                <h2>Student list</h2>
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+    <footer id="footer">&copy; 2025 Student Management Dashboard</footer>
+
+</body>
+
+</html>
