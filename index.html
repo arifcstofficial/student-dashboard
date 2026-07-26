@@ -21,9 +21,11 @@
 
         <div class="header-right">
             <img class="logo-img" src="./assests/icons/administrator.svg" alt="">
-            <span>Administrator</span>
-            <p>July 25,2026</p>
+            <div>
+                <p>Administrator</p>
+            </div>
         </div>
+
 
     </header>
     <main>
@@ -73,11 +75,11 @@
                     <h4>Total Registered</h4>
                 </article>
 
-                <artcile class="stat-card">
+                <article class="stat-card">
                     <h3>Average CGPA</h3>
                     <p id="stat-card2">3.45</p>
                     <h4>Overall Average</h4>
-                </artcile>
+                </article>
 
                 <article class="stat-card">
                     <h3>Highest CGPA</h3>
@@ -100,6 +102,10 @@
 
                         <form>
                             <div class="student-form">
+                                <div><label for="student-id">Id</label>
+                                    <input type="numbewr" id="student-id" name="studentId"
+                                        placeholder="Enter Id number" required>
+                                </div>
                                 <div><label for="student-name">Name</label>
                                     <input type="text" id="student-name" name="studentName"
                                         placeholder="Enter full name" required>
