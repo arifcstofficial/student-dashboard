@@ -156,6 +156,42 @@ aside{
 #filter-btn4{
     background-color:mediumaquamarine;
 }
+
+#filter-department{
+    padding:7px;
+}
+
+.student-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size:20px;
+}
+
+.student-form input,select{
+    padding:6px 14px;
+    border-radius: 8px;
+    
+}
+
+.add-student-btn{
+    display: flex;
+    justify-content: center;
+    margin:20px;
+}
+.add-student-btn button{
+    background-color: #64748b;
+    color:white;
+    border-radius: 8px;
+    padding:10px;
+    transition:.3s;
+}
+.add-student-btn button:hover{
+    background-color:tomato;
+    color:black:
+}
+
+
 table{
     width:100%;
     

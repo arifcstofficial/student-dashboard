@@ -98,36 +98,46 @@
                     <section id="add-student">
                         <h2>Add New Student</h2>
 
-                        <form class="student-form">
-                            <label for="student-name">Name</label>
-                            <input type="text" id="student-name" name="studentName" placeholder="Enter full name"
-                                required>
+                        <form>
+                            <div class="student-form">
+                                <div><label for="student-name">Name</label>
+                                    <input type="text" id="student-name" name="studentName"
+                                        placeholder="Enter full name" required>
+                                </div>
 
-                            <label for="department">Department</label>
-                            <select id="department" name="departmentName" required>
-                                <option value="" selected disabled>Select Department</option>
-                                <option value="cse">Computer Science</option>
-                                <option value="electrical">Electrical</option>
-                                <option value="civil">Civil </option>
-                                <option value="Construction">Construction</option>
-                                <option value="Refrigeration">RAC</option>
-                            </select>
+                                <div>
+                                    <label for="department">Department</label>
+                                    <select id="department" name="departmentName" required>
+                                        <option value="" selected disabled>Select Department</option>
+                                        <option value="cse">Computer Science</option>
+                                        <option value="electrical">Electrical</option>
+                                        <option value="civil">Civil </option>
+                                        <option value="Construction">Construction</option>
+                                        <option value="Refrigeration">RAC</option>
+                                    </select>
+                                </div>
 
-                            <label for="semester">Semester</label>
-                            <select id="semester" name="semesterName" required>
-                                <option value="" selected disabled>Select Semester</option>
-                                <option value="1">first</option>
-                                <option value="2">second</option>
-                                <option value="3">third</option>
-                                <option value="4">fourth</option>
-                                <option value="5">fifth</option>
-                                <option value="6">sixth</option>
-                                <option value="7">seventh</option>
-                            </select>
-                            <label for="cgpa">CGPA</label>
-                            <input type="number" id="cgpa" name="cgpaNumber" placeholder="Enter CGPA(0-4.00)" min="0"
-                                max="4" step="0.01" required>
-                            <button type="submit">+ Add Student</button>
+
+                                <div>
+                                    <label for="semester">Semester</label>
+                                    <select id="semester" name="semesterName" required>
+                                        <option value="" selected disabled>Select Semester</option>
+                                        <option value="1">first</option>
+                                        <option value="2">second</option>
+                                        <option value="3">third</option>
+                                        <option value="4">fourth</option>
+                                        <option value="5">fifth</option>
+                                        <option value="6">sixth</option>
+                                        <option value="7">seventh</option>
+                                    </select>
+                                </div>
+                                <div> <label for="cgpa">CGPA</label>
+                                    <input type="number" id="cgpa" name="cgpaNumber" placeholder="Enter CGPA(0-4.00)"
+                                        min="0" max="4" step="0.01" required>
+                                </div>
+                            </div>
+                            <div class="add-student-btn"> <button type="submit">+ Add Student</button></div>
+
                         </form>
                     </section>
 
@@ -155,7 +165,7 @@
 
 
                         </select>
-                     
+
                         <button type="button" id="filter-btn1">Sort by Name</button>
                         <button type="button" id="filter-btn2">Sort by CGPA</button>
                         <button type="button" id="filter-btn3">Sort by Semester</button>
@@ -189,9 +199,9 @@
                             <td>3.86</td>
                             <td>Excellent</td>
                             <td>Delete</td>
-                        
+
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </section>
