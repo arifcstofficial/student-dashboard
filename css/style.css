@@ -132,3 +132,16 @@ aside{
     display: grid;
     gap:10px;
 }
+table{
+    width:100%;
+    
+     text-align: left;
+}
+th,td{
+    border:2px solid rgb(56, 116, 70);
+    padding:10PX;
+   
+}
+th{
+    background-color: #64748b;
+}
