@@ -173,7 +173,11 @@ aside{
     border-radius: 8px;
     
 }
-
+.search-student-parent input{
+    width:100%;
+   padding:6px 0px; 
+   margin:5px 0px;
+}
 .add-student-btn{
     display: flex;
     justify-content: center;
