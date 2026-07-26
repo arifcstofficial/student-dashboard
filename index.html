@@ -100,10 +100,10 @@
                     <section id="add-student">
                         <h2>Add New Student</h2>
 
-                        <form>
-                            <div class="student-form">
+                        <form class="student-form">
+                            <div class="form-fields">
                                 <div><label for="student-id">Id</label>
-                                    <input type="numbewr" id="student-id" name="studentId"
+                                    <input type="number" id="student-id" name="studentId"
                                         placeholder="Enter Id number" required>
                                 </div>
                                 <div><label for="student-name">Name</label>
@@ -196,18 +196,9 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Arif</td>
-                            <td>CSE</td>
-                            <td>8th</td>
-                            <td>3.86</td>
-                            <td>Excellent</td>
-                            <td>Delete</td>
 
-                        </tr>
-
+                    <tbody id="student-table-body">
+                      
                     </tbody>
                 </table>
             </section>
@@ -215,11 +206,11 @@
 
         </section>
 
-
     </main>
 
     <footer id="footer">&copy; 2025 Student Management Dashboard</footer>
 
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

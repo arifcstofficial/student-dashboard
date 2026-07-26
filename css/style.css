@@ -145,7 +145,7 @@ aside{
     display: grid;
     gap:10px;
 }
-.student-form{
+.form-fields{
     display: flex;
     justify-content: space-evenly;
     gap:5px;
@@ -179,14 +179,14 @@ aside{
     padding:7px;
 }
 
-.student-form{
+.form-fields{
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-size:20px;
 }
 
-.student-form input,select{
+.form-fields input,select{
     padding:6px 14px;
     border-radius: 8px;
     
@@ -226,4 +226,16 @@ th,td{
 }
 th{
     background-color: #64748b;
+}
+
+
+.delete-btn{
+    
+    background-color: #64748b;
+    padding:6px 8px;
+    color:yellow;
+    font-weight: bold;
+    cursor:pointer;
+    border-radius: 3px;
+
 }
