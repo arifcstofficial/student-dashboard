@@ -26,12 +26,14 @@ header{
     justify-content: center;
     align-items: center;
     margin-left:60px;
+    color:tomato;
 }
 .header-right{
     display: flex;
     gap:20px;
     justify-content: center;
     align-items: center;
+    color:rgb(69, 220, 69);
 }
 
 
@@ -210,7 +212,7 @@ aside{
 }
 .add-student-btn button:hover{
     background-color:tomato;
-    color:black:
+    color:black;
 }
 
 
@@ -233,9 +235,15 @@ th{
     
     background-color: #64748b;
     padding:6px 8px;
-    color:yellow;
+    color:white;
     font-weight: bold;
     cursor:pointer;
     border-radius: 3px;
+    transition: .3s;
+}
+
+.delete-btn:hover{
+    background-color: rgb(168, 168, 6);
+    color:white;
 
 }

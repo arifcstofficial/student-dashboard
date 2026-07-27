@@ -27,9 +27,10 @@ tableBody.addEventListener("click", function (event) {
         students = students.filter(function (student) {
             return student.id !== studentId;
         })
+        renderStudents();
 }
 
-renderStudents();
+
 });
 
 
@@ -51,7 +52,45 @@ studentForm.addEventListener("submit", function (event) {
     };
 
     students.push(student);
+    updateStatistics();
     renderStudents();
     studentForm.reset();
 }
 )
+
+
+function updateStatistics(){
+    let totalCgpa=0;
+    for(const student of students)
+    {
+         totalCgpa=totalCgpa+student.cgpa;
+    }
+    
+    const averageCgpaValue=students.length===0?0:totalCgpa/students.length;
+
+    const totalStudents=document.getElementById("stat-card1");
+    totalStudents.textContent=students.length;
+
+    const averageCgpa=document.getElementById("stat-card2");
+    averageCgpa.textContent=averageCgpaValue.toFixed(2);
+
+    let highestCgpa=0;
+    for(const student of students)
+    {   
+        if(student.cgpa>highestCgpa)
+            highestCgpa=student.cgpa;
+    }
+    
+    const highcgpa=document.getElementById("stat-card3");
+    highcgpa.textContent=highestCgpa.toFixed(2);
+
+
+    let departmentNum=new Set();
+    for(const student of students){
+        departmentNum=departmentNum.add(student.department);
+    }
+
+    const depart=document.getElementById("stat-card4");
+    depart.textContent=departmentNum.size;
+
+}
