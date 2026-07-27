@@ -1,11 +1,12 @@
+
 let students = [];
 const studentForm = document.querySelector(".student-form");
 const tableBody = document.getElementById("student-table-body");
 
-function renderStudents() {
+function renderStudents(studentList) {
     tableBody.innerHTML = "";
 
-    students.forEach(function (student) {
+    studentList.forEach(function (student) {
         const row = document.createElement("tr");
         row.innerHTML = `
         <td>${student.id}</td> 
@@ -27,8 +28,8 @@ tableBody.addEventListener("click", function (event) {
         students = students.filter(function (student) {
             return student.id !== studentId;
         })
-        renderStudents();
-}
+        renderStudents(students);
+    }
 
 
 });
@@ -53,44 +54,53 @@ studentForm.addEventListener("submit", function (event) {
 
     students.push(student);
     updateStatistics();
-    renderStudents();
+    renderStudents(students);
     studentForm.reset();
 }
 )
 
 
-function updateStatistics(){
-    let totalCgpa=0;
-    for(const student of students)
-    {
-         totalCgpa=totalCgpa+student.cgpa;
-    }
-    
-    const averageCgpaValue=students.length===0?0:totalCgpa/students.length;
-
-    const totalStudents=document.getElementById("stat-card1");
-    totalStudents.textContent=students.length;
-
-    const averageCgpa=document.getElementById("stat-card2");
-    averageCgpa.textContent=averageCgpaValue.toFixed(2);
-
-    let highestCgpa=0;
-    for(const student of students)
-    {   
-        if(student.cgpa>highestCgpa)
-            highestCgpa=student.cgpa;
-    }
-    
-    const highcgpa=document.getElementById("stat-card3");
-    highcgpa.textContent=highestCgpa.toFixed(2);
-
-
-    let departmentNum=new Set();
-    for(const student of students){
-        departmentNum=departmentNum.add(student.department);
+function updateStatistics() {
+    let totalCgpa = 0;
+    for (const student of students) {
+        totalCgpa = totalCgpa + student.cgpa;
     }
 
-    const depart=document.getElementById("stat-card4");
-    depart.textContent=departmentNum.size;
+    const averageCgpaValue = students.length === 0 ? 0 : totalCgpa / students.length;
+
+    const totalStudents = document.getElementById("stat-card1");
+    totalStudents.textContent = students.length;
+
+    const averageCgpa = document.getElementById("stat-card2");
+    averageCgpa.textContent = averageCgpaValue.toFixed(2);
+
+    let highestCgpa = 0;
+    for (const student of students) {
+        if (student.cgpa > highestCgpa)
+            highestCgpa = student.cgpa;
+    }
+
+    const highcgpa = document.getElementById("stat-card3");
+    highcgpa.textContent = highestCgpa.toFixed(2);
+
+
+    let departmentNum = new Set();
+    for (const student of students) {
+        departmentNum = departmentNum.add(student.department);
+    }
+
+    const depart = document.getElementById("stat-card4");
+    depart.textContent = departmentNum.size;
 
 }
+
+const searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", function () {
+    const searchText=searchInput.value.toLowerCase();
+   
+    const filteredStudents=students.filter(function(student){
+        return student.name.toLowerCase().includes(searchText);
+    });
+
+ renderStudents(filteredStudents);
+});
